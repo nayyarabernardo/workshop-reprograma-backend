@@ -1,10 +1,10 @@
-function calcularValorHora() {
-    var ganhoMes = document.querySelector("#ganho-mes").valueAsNumber;
-    var horasDia = document.querySelector("#horas-dia").valueAsNumber;
-    var diasTrabalhados = 20; // considerando 20 dias úteis por mês
-    var valorHora = ganhoMes / (horasDia * diasTrabalhados);
-  
-    var resposta = document.querySelector("#resposta");
-    resposta.innerHTML = "R$ " + valorHora.toFixed(2);
-  }
-  
+var inputValorDoMes = document.querySelector("#ganho-mes");
+var inputHorasPorDias = document.querySelector("#horas-dia");
+var spanHora = document.querySelector('.secao-hora .secao__rodape__valor span');
+
+function calcularValorHora(){
+    var totalDeHoras = inputHorasPorDias.valueAsNumber *22;
+    var valordeHoras = (inputValorDoMes.valueAsNumber / totalDeHoras).toFixed(2);
+
+    spanHora.textContent = "R$ " + valordeHoras;
+}
