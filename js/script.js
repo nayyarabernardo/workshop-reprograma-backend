@@ -8,3 +8,5 @@ function calcularValorHora(){
 
     spanHora.textContent = "R$ " + valordeHoras;
 }
+
+
